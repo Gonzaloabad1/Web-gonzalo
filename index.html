@@ -256,13 +256,24 @@
                     </div>
                 </div>
                 <div class="p-16 bg-white/5">
-                    <form action="https://formspree.io/f/mzdyeeqq" method="POST" class="space-y-6">
-                        <input type="text" name="nombre" required placeholder="Nombre *" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black text-white">
-                        <input type="email" name="email" required placeholder="Email *" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black text-white">
-                        <textarea name="mensaje" required placeholder="Mensaje *" rows="4" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black text-white"></textarea>
-                        <button type="submit" class="w-full bg-gold text-black font-black py-5 rounded-2xl mt-10 hover:bg-white transition uppercase text-[10px] tracking-[0.2em]">Enviar mensaje</button>
-                    </form>
-                </div>
+    <form action="https://formspree.io/f/mzdyeeqq" method="POST" class="space-y-6">
+        <input type="text" name="nombre" required placeholder="Nombre *" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black">
+        
+        <input type="email" name="email" required placeholder="Email *" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black">
+        
+        <select name="servicio" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black text-gray-500">
+            <option value="" disabled selected>Selecciona un servicio</option>
+            <option value="Desarrollo Web">Desarrollo Web</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+            <option value="Consultoria">Consultoría Digital</option>
+            <option value="E-commerce">E-commerce</option>
+        </select>
+        
+        <textarea name="mensaje" required placeholder="Mensaje *" rows="4" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black"></textarea>
+        
+        <button type="submit" class="w-full bg-gold text-black font-black py-5 rounded-2xl mt-10 hover:bg-white transition uppercase text-[10px] tracking-[0.2em]">Enviar mensaje</button>
+    </form>
+</div>
             </div>
         </div>
     </section>
