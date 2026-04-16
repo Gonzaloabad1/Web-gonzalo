@@ -1,350 +1,269 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gonzalo Abad | Fullstack Designer & Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --gold: #D4AF37;
-            --dark-gold: #996515;
-            --soft-gold: rgba(212, 175, 55, 0.1);
-        }
-        .text-gold { color: var(--gold); }
-        .bg-gold { background-color: var(--gold); }
-        .border-gold { border-color: var(--gold); }
-        
-        .glass {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gonzalo Abad | Fullstack Designer & Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark-gold: #996515;
+            --soft-gold: rgba(212, 175, 55, 0.1);
+        }
+        .text-gold { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
 
-        .gold-gradient-text {
-            background: linear-gradient(to right, #D4AF37, #FBEAA1, #996515);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        .gold-gradient-text {
+            background: linear-gradient(to right, #D4AF37, #FBEAA1, #996515);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-        .card-hover:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05);
-        }
-    </style>
+        .card-hover:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05);
+        }
+    </style>
 </head>
 <body class="bg-black text-white font-sans selection:bg-gold selection:text-black">
 
-    <nav class="fixed w-full z-50 glass py-5">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="text-xl md:text-2xl font-black uppercase tracking-tighter">
-                <span class="text-gold">Gonzalo</span> Abad
-            </div>
-            <div class="hidden md:flex space-x-10 text-[10px] font-black uppercase tracking-[0.2em]">
-                <a href="#inicio" class="hover:text-gold transition">Inicio</a>
-                <a href="#sobre-mi" class="hover:text-gold transition">Quién Soy</a>
-                <a href="#servicios" class="hover:text-gold transition">Servicios</a>
-                <a href="https://my-portfolio-ilc9.vercel.app/" target="_blank" class="hover:text-gold transition underline decoration-gold underline-offset-4">Portfolio</a>
-                <a href="#contacto" class="bg-gold text-black px-6 py-2 rounded-full hover:scale-105 transition transform">Contáctame</a>
-            </div>
-        </div>
-    </nav>
-
-    <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
-        <div class="absolute w-[500px] h-[500px] bg-gold/5 rounded-full blur-[120px] -top-20 -right-20"></div>
-        <div class="container mx-auto px-6 text-center relative z-10">
-            <p class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-8">+50 proyectos entregados</p>
-            <h1 class="text-6xl md:text-9xl font-black mb-8 leading-none tracking-tighter">
-                Donde el <span class="gold-gradient-text italic">código</span> <br> cobra vida
-            </h1>
-            <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl mb-12 font-light">
-                Soy Gonzalo Abad — Fullstack Designer & Developer. Construyo productos digitales donde cada píxel tiene intención y cada línea de código tiene propósito.
-            </p>
-            <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="#servicios" class="bg-gold text-black px-12 py-5 rounded-full font-black text-sm uppercase tracking-widest hover:bg-white transition">Ver mis servicios</a>
-                <a href="#contacto" class="border border-gold/50 text-gold px-12 py-5 rounded-full font-black text-sm uppercase tracking-widest hover:bg-gold hover:text-black transition">Hablemos</a>
-            </div>
-            <div class="mt-24 grid grid-cols-2 md:grid-cols-3 gap-12 max-w-4xl mx-auto opacity-50">
-                <div class="text-center"><span class="block text-4xl font-bold">5+</span> <span class="text-[9px] uppercase tracking-widest">Años experiencia</span></div>
-                <div class="text-center"><span class="block text-4xl font-bold">80+</span> <span class="text-[9px] uppercase tracking-widest">Proyectos OK</span></div>
-                <div class="text-center col-span-2 md:col-span-1"><span class="block text-4xl font-bold">100%</span> <span class="text-[9px] uppercase tracking-widest">Satisfacción</span></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre-mi" class="py-32 bg-[#030303]">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
-            <div class="relative group">
-                <img src="https://raw.githubusercontent.com/Gonzaloabad1/Web-gonzalo/refs/heads/main/Foto%2Bautor.jpg" class="rounded-3xl grayscale group-hover:grayscale-0 transition duration-1000 border border-white/10">
-
-                <div class="absolute -bottom-6 -right-6 glass p-8 rounded-2xl">
-                    <span class="text-gold text-4xl font-black italic">80+</span>
-                    <p class="text-[10px] uppercase font-bold tracking-widest text-gray-400">Proyectos completados</p>
-                </div>
-            </div>
-            <div>
-                <h2 class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-4">Sobre mí</h2>
-                <h3 class="text-5xl font-black mb-8 italic">Hola! Soy Gonzalo Abad Alonso</h3>
-                <p class="text-gray-400 text-lg leading-relaxed mb-10">
-                    Técnico de Sistemas Microinformáticos y web designer y Developer con experiencia tanto en el front-end como el back-end para construir ideas en presencias digitales que generan resultados reales.
-                </p>
-                
-                <div class="grid grid-cols-2 gap-8 mb-10">
-                    <div><span class="text-gold font-bold">50+</span> <p class="text-xs text-gray-500 uppercase">Clientes</p></div>
-                    <div><span class="text-gold font-bold">5+</span> <p class="text-xs text-gray-500 uppercase">Años</p></div>
-                </div>
-
-                <div class="space-y-6">
-                    <div class="group">
-                        <div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest"><span>UI/UX Design</span> <span>92%</span></div>
-                        <div class="h-[2px] w-full bg-gray-900"><div class="h-full bg-gold transition-all duration-1000" style="width: 92%"></div></div>
-                    </div>
-                    <div class="group">
-                        <div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest"><span>React / TypeScript</span> <span>90%</span></div>
-                        <div class="h-[2px] w-full bg-gray-900"><div class="h-full bg-gold transition-all duration-1000" style="width: 90%"></div></div>
-                    </div>
-                    <div class="group">
-                        <div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest"><span>CSS / TailwindCSS</span> <span>95%</span></div>
-                        <div class="h-[2px] w-full bg-gray-900"><div class="h-full bg-gold transition-all duration-1000" style="width: 95%"></div></div>
-                    </div>
-                      <div class="group">
-                        <div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest"><span>Node.js / Backend</span> <span>78%</span></div>
-                        <div class="h-[2px] w-full bg-gray-900"><div class="h-full bg-gold transition-all duration-1000" style="width: 78%"></div></div>
-                    </div>
-                       <div class="group">
-                        <div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest"><span>Figma / Prototypingd</span> <span>88%</span></div>
-                        <div class="h-[2px] w-full bg-gray-900"><div class="h-full bg-gold transition-all duration-1000" style="width: 88%"></div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="servicios" class="py-32">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-24">
-                <h2 class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-4 text-center">Mis Servicios</h2>
-                <h3 class="text-5xl font-black italic">Soluciones Digitales</h3>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="glass p-10 rounded-[2.5rem] card-hover transition-all duration-500">
-                    <p class="text-gold text-[10px] font-black mb-4 uppercase">Desde 60€/hora</p>
-                    <h4 class="text-2xl font-bold mb-4 italic">UI/UX Design</h4>
-                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">Diseño interfaces atractivas que crean experiencias memorables y maximizan la conversión.</p>
-                    <ul class="text-gray-400 space-y-3 text-xs font-medium border-t border-white/5 pt-8">
-                        <li><i class="fas fa-check text-gold mr-3"></i>Investigación de usuarios</li>
-                        <li><i class="fas fa-check text-gold mr-3"></i>Wireframes y prototipos</li>
-                        <li><i class="fas fa-check text-gold mr-3"></i>Diseño visual en Figma</li>
-                    </ul>
-                </div>
-
-                <div class="bg-gold p-10 rounded-[2.5rem] text-black transform lg:scale-105 shadow-2xl shadow-gold/10">
-                    <p class="text-black/60 text-[10px] font-black mb-4 uppercase">Desde 400€</p>
-                    <h4 class="text-2xl font-bold mb-4 italic uppercase">Desarrollo Web</h4>
-                    <p class="text-black/80 text-sm mb-8 leading-relaxed">Construyo sitios modernos y escalables usando las últimas tecnologías y código limpio.</p>
-                    <ul class="text-black/70 space-y-3 text-xs font-bold border-t border-black/10 pt-8">
-                        <li><i class="fas fa-check mr-3"></i>React / Next.js & TS</li>
-                        <li><i class="fas fa-check mr-3"></i>APIs REST & Node.js</li>
-                        <li><i class="fas fa-check mr-3"></i>Optimización SEO Full</li>
-                    </ul>
-                </div>
-
-                <div class="glass p-10 rounded-[2.5rem] card-hover transition-all duration-500">
-                    <p class="text-gold text-[10px] font-black mb-4 uppercase">Desde 60€/hora/h</p>
-                    <h4 class="text-2xl font-bold mb-4 italic">Consultoría Digital</h4>
-                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">Analizo tu situación actual y te doy la hoja de ruta clara para escalar tu negocio.</p>
-                    <ul class="text-gray-400 space-y-3 text-xs font-medium border-t border-white/5 pt-8">
-                        <li><i class="fas fa-check text-gold mr-3"></i>Auditoría digital</li>
-                        <li><i class="fas fa-check text-gold mr-3"></i>Estrategia de producto</li>
-                        <li><i class="fas fa-check text-gold mr-3"></i>Roadmap tecnológico</li>
-                    </ul>
-                </div>
-
-                <div class="glass p-10 rounded-[2.5rem] card-hover transition-all duration-500">
-                    <p class="text-gold text-[10px] font-black mb-4 uppercase">300 € - 600 €</p>
-                    <h4 class="text-2xl font-bold mb-4 italic text-gold">E-commerce</h4>
-                    <ul class="text-gray-400 space-y-3 text-xs mt-6">
-                        <li><i class="fas fa-shopping-cart text-gold mr-3"></i>Shopify / WooCommerce</li>
-                        <li><i class="fas fa-credit-card text-gold mr-3"></i>Pasarelas de pago</li>
-                        <li><i class="fas fa-chart-line text-gold mr-3"></i>Analytics & conversión</li>
-                    </ul>
-                </div>
-
-                <div class="glass p-10 rounded-[2.5rem] card-hover transition-all duration-500">
-                    <p class="text-gold text-[10px] font-black mb-4 uppercase">600€</p>
-                    <h4 class="text-2xl font-bold mb-4 italic text-gold">SEO & Performance</h4>
-                    <ul class="text-gray-400 space-y-3 text-xs mt-6">
-                        <li><i class="fas fa-rocket text-gold mr-3"></i>Optimización técnica</li>
-                        <li><i class="fas fa-search text-gold mr-3"></i>Estrategia de keywords</li>
-                        <li><i class="fas fa-bolt text-gold mr-3"></i>Core Web Vitals</li>
-                    </ul>
-                </div>
-
-                <div class="glass p-10 rounded-[2.5rem] card-hover transition-all duration-500">
-                    <p class="text-gold text-[10px] font-black mb-4 uppercase">Desde 150€/mes</p>
-                    <h4 class="text-2xl font-bold mb-4 italic text-gold">Mantenimiento Web</h4>
-                    <ul class="text-gray-400 space-y-3 text-xs mt-6">
-                        <li><i class="fas fa-shield-alt text-gold mr-3"></i>Seguridad & Backups</li>
-                        <li><i class="fas fa-headset text-gold mr-3"></i>Soporte prioritario</li>
-                        <li><i class="fas fa-sync text-gold mr-3"></i>Actualizaciones 24/7</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-32 bg-[#050505] overflow-hidden">
-        <div class="container mx-auto px-6">
-            <h3 class="text-5xl font-black italic mb-24 text-center">Mi Trayectoria</h3>
-            
-            <div class="max-w-4xl mx-auto space-y-20 relative">
-                <div class="absolute h-full w-[1px] bg-gray-900 left-4 md:left-1/2"></div>
-                
-                <div class="relative flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 md:pr-12 text-left md:text-right mb-4 md:mb-0">
-                        <span class="text-gold font-black text-2xl">2025</span>
-                        <h4 class="text-xl font-bold uppercase tracking-widest mt-2">Técnico Sistemas & Full Stack</h4>
-                        <p class="text-gray-500 text-sm">AUTRADE Ciudad Real · ThePower</p>
-                    </div>
-                    <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gold rounded-full transform -translate-x-1.5 shadow-[0_0_10px_#D4AF37]"></div>
-                    <div class="md:w-1/2 md:pl-12 opacity-50 text-xs leading-relaxed">
-                        Técnico de Sistemas en AUTRADE (Sep–Dic 2025). Desarrollador Full Stack en ThePower (Mar 2025).
-                    </div>
-                </div>
-
-                <div class="relative flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 md:pr-12 text-left md:text-right mb-4 md:mb-0 order-1 md:order-2">
-                         <span class="text-gray-600 font-black text-2xl">2023–2024</span>
-                         <h4 class="text-xl font-bold uppercase tracking-widest mt-2">Freelance & Full Stack</h4>
-                         <p class="text-gray-500 text-sm">ThePower Business School</p>
-                    </div>
-                    <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gray-800 rounded-full transform -translate-x-1.5"></div>
-                    <div class="md:w-1/2 md:pl-12 order-2 md:order-1 opacity-50 text-xs leading-relaxed md:text-right">
-                        Proyectos end-to-end con React, Express, MongoDB y Node.js (Jun 2023–Dic 2023).
-                    </div>
-                </div>
-
-                <div class="relative flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 md:pr-12 text-left md:text-right mb-4 md:mb-0">
-                        <span class="text-gray-600 font-black text-2xl">2021–2022</span>
-                        <h4 class="text-xl font-bold uppercase tracking-widest mt-2">Formación Especializada</h4>
-                        <p class="text-gray-500 text-sm">Google · Fundación ONCE</p>
-                    </div>
-                    <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gray-800 rounded-full transform -translate-x-1.5"></div>
-                    <div class="md:w-1/2 md:pl-12 opacity-50 text-xs leading-relaxed">
-                        Apps Móviles, SEO, Marketing Digital y Seguridad Informática.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="py-32">
-        <div class="container mx-auto px-6">
-            <div class="glass max-w-6xl mx-auto rounded-[3rem] overflow-hidden grid md:grid-cols-2">
-                <div class="p-16 bg-gold text-black">
-                    <h2 class="text-6xl font-black italic mb-8 leading-none">¿Hablamos ahora?</h2>
-                    <p class="text-lg font-bold mb-12">goabad18@outlook.com</p>
-                    <div class="flex space-x-6 text-2xl">
-                        <a href="https://www.linkedin.com/in/gonzaloabadalonso?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Gonzaloabad1"><i class="fab fa-github"></i></a>
-                        <a href="https://www.facebook.com/Gonzalo"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-              <div class="p-16 bg-white/5">
-    <form action="https://formspree.io/f/mzdyeeqq" method="POST" class="space-y-6">
-        <input type="text" name="nombre" required placeholder="Nombre *" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black">
-        
-        <input type="email" name="email" required placeholder="Email *" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black">
-        
-        <select name="servicio" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black text-gray-500">
-            <option value="" disabled selected>Selecciona un servicio</option>
-            <option value="Desarrollo Web">Desarrollo Web</option>
-            <option value="UI/UX Design">UI/UX Design</option>
-            <option value="Consultoria">Consultoría Digital</option>
-            <option value="E-commerce">E-commerce</option>
-        </select>
-        
-        <textarea name="mensaje" required placeholder="Mensaje *" rows="4" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black"></textarea>
-        
-        <button type="submit" class="w-full bg-gold text-black font-black py-5 rounded-2xl mt-10 hover:bg-white transition uppercase text-[10px] tracking-[0.2em]">Enviar mensaje</button>
-    </form>
-</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="bg-[#020202] pt-20 pb-10 border-t border-white/5 relative overflow-hidden">
-    <div class="absolute w-[300px] h-[300px] bg-gold/5 rounded-full blur-[100px] -bottom-20 -left-20"></div>
-
-    <div class="container mx-auto px-6 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-            
-            <div class="space-y-6">
-                <div class="text-2xl font-black uppercase tracking-tighter">
-                    <span class="text-gold">Gonzalo</span> Abad
-                </div>
-                <p class="text-gray-500 text-sm leading-relaxed max-w-xs">
-                    Transformando visiones complejas en experiencias digitales excepcionales. Diseño y código con propósito.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="https://www.linkedin.com/in/gonzaloabadalonso" target="_blank" class="w-10 h-10 glass rounded-full flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all duration-300">
-                        <i class="fab fa-linkedin-in text-xs"></i>
-                    </a>
-                    <a href="https://github.com/Gonzaloabad1" target="_blank" class="w-10 h-10 glass rounded-full flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all duration-300">
-                        <i class="fab fa-github text-xs"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 glass rounded-full flex items-center justify-center text-gold hover:bg-gold hover:text-black transition-all duration-300">
-                        <i class="fab fa-x-twitter text-xs"></i>
-                    </a>
-                </div>
+    <nav class="fixed w-full z-50 glass py-5">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-xl md:text-2xl font-black uppercase tracking-tighter">
+                <span class="text-gold">Gonzalo</span> Abad
             </div>
-
-            <div>
-                <h4 class="text-white font-black text-[10px] uppercase tracking-[0.2em] mb-8">Navegación</h4>
-                <ul class="space-y-4 text-sm text-gray-500 font-medium">
-                    <li><a href="#inicio" class="hover:text-gold transition-colors">Inicio</a></li>
-                    <li><a href="#sobre-mi" class="hover:text-gold transition-colors">Quién Soy</a></li>
-                    <li><a href="#servicios" class="hover:text-gold transition-colors">Servicios</a></li>
-                    <li><a href="#contacto" class="hover:text-gold transition-colors">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="text-white font-black text-[10px] uppercase tracking-[0.2em] mb-8">Servicios</h4>
-                <ul class="space-y-4 text-sm text-gray-500 font-medium">
-                    <li><a href="#servicios" class="hover:text-gold transition-colors">Desarrollo Web Fullstack</a></li>
-                    <li><a href="#servicios" class="hover:text-gold transition-colors">UI/UX Design</a></li>
-                    <li><a href="#servicios" class="hover:text-gold transition-colors">E-commerce Solutions</a></li>
-                    <li><a href="#servicios" class="hover:text-gold transition-colors">SEO & Performance</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="text-white font-black text-[10px] uppercase tracking-[0.2em] mb-8">Hablemos</h4>
-                <p class="text-gray-500 text-sm mb-6">¿Tienes un proyecto en mente? Envíame un correo hoy mismo.</p>
-                <a href="mailto:goabad18@outlook.com" class="text-gold font-bold text-sm underline decoration-gold/30 underline-offset-8 hover:decoration-gold transition-all">
-                    goabad18@outlook.com
-                </a>
+            <div class="hidden md:flex space-x-10 text-[10px] font-black uppercase tracking-[0.2em]">
+                <a href="#inicio" class="hover:text-gold transition">Inicio</a>
+                <a href="#sobre-mi" class="hover:text-gold transition">Quién Soy</a>
+                <a href="#servicios" class="hover:text-gold transition">Servicios</a>
+                <a href="https://my-portfolio-ilc9.vercel.app/" target="_blank" class="hover:text-gold transition underline decoration-gold underline-offset-4">Portfolio</a>
+                <a href="#contacto" class="bg-gold text-black px-6 py-2 rounded-full hover:scale-105 transition transform">Contáctame</a>
             </div>
         </div>
+    </nav>
 
-        <div class="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-[9px] uppercase tracking-[0.4em] text-gray-600">
-                © 2026 Gonzalo Abad Alonso. Made with <span class="text-gold">Code</span> & <span class="text-gold">Soul</span>.
+    <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <div class="absolute w-[500px] h-[500px] bg-gold/5 rounded-full blur-[120px] -top-20 -right-20"></div>
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <p class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-8">+50 proyectos entregados</p>
+            <h1 class="text-6xl md:text-9xl font-black mb-8 leading-none tracking-tighter">
+                Donde el <span class="gold-gradient-text italic">código</span> <br> cobra vida
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl mb-12 font-light">
+                Soy Gonzalo Abad — Fullstack Designer & Developer. Construyo productos digitales donde cada píxel tiene intención y cada línea de código tiene propósito.
             </p>
-            <div class="flex space-x-8 text-[9px] uppercase tracking-[0.2em] text-gray-600 font-bold">
-                <a href="#" class="hover:text-white transition">Privacidad</a>
-                <a href="#" class="hover:text-white transition">Cookies</a>
-                <a href="#" class="hover:text-white transition">Términos</a>
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="#servicios" class="bg-gold text-black px-12 py-5 rounded-full font-black text-sm uppercase tracking-widest hover:bg-white transition">Ver mis servicios</a>
+                <a href="#contacto" class="border border-gold/50 text-gold px-12 py-5 rounded-full font-black text-sm uppercase tracking-widest hover:bg-gold hover:text-black transition">Hablemos</a>
+            </div>
+            <div class="mt-24 grid grid-cols-2 md:grid-cols-3 gap-12 max-w-4xl mx-auto opacity-50">
+                <div class="text-center"><span class="block text-4xl font-bold">5+</span> <span class="text-[9px] uppercase tracking-widest">Años experiencia</span></div>
+                <div class="text-center"><span class="block text-4xl font-bold">80+</span> <span class="text-[9px] uppercase tracking-widest">Proyectos OK</span></div>
+                <div class="text-center col-span-2 md:col-span-1"><span class="block text-4xl font-bold">100%</span> <span class="text-[9px] uppercase tracking-widest">Satisfacción</span></div>
             </div>
         </div>
-    </div>
-</footer>
+    </section>
+
+    <section id="sobre-mi" class="py-32 bg-[#030303]">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+            <div class="relative group">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000" class="rounded-3xl grayscale group-hover:grayscale-0 transition duration-1000 border border-white/10">
+                <div class="absolute -bottom-6 -right-6 glass p-8 rounded-2xl">
+                    <span class="text-gold text-4xl font-black italic">80+</span>
+                    <p class="text-[10px] uppercase font-bold tracking-widest text-gray-400">Proyectos completados</p>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-4">Sobre mí</h2>
+                <h3 class="text-5xl font-black mb-8 italic">Hola! Soy Gonzalo Abad Alonso</h3>
+                <p class="text-gray-400 text-lg leading-relaxed mb-10">
+                    Técnico de Sistemas Microinformáticos y web designer y Developer con experiencia tanto en el front-end como el back-end para construir ideas en presencias digitales que generan resultados reales.
+                </p>
+                
+                <div class="grid grid-cols-2 gap-8 mb-10">
+                    <div><span class="text-gold font-bold">50+</span> <p class="text-xs text-gray-500 uppercase">Clientes</p></div>
+                    <div><span class="text-gold font-bold">5+</span> <p class="text-xs text-gray-500 uppercase">Años</p></div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="group">
+                        <div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest"><span>UI/UX Design</span> <span>92%</span></div>
+                        <div class="h-[2px] w-full bg-gray-900"><div class="h-full bg-gold transition-all duration-1000" style="width: 92%"></div></div>
+                    </div>
+                    <div class="group">
+                        <div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest"><span>React / TypeScript</span> <span>90%</span></div>
+                        <div class="h-[2px] w-full bg-gray-900"><div class="h-full bg-gold transition-all duration-1000" style="width: 90%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-32">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-4 text-center">Mis Servicios</h2>
+                <h3 class="text-5xl font-black italic">Soluciones Digitales</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-10 rounded-[2.5rem] card-hover transition-all duration-500">
+                    <p class="text-gold text-[10px] font-black mb-4 uppercase">Desde $500</p>
+                    <h4 class="text-2xl font-bold mb-4 italic">UI/UX Design</h4>
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">Diseño interfaces atractivas que crean experiencias memorables y maximizan la conversión.</p>
+                    <ul class="text-gray-400 space-y-3 text-xs font-medium border-t border-white/5 pt-8">
+                        <li><i class="fas fa-check text-gold mr-3"></i>Investigación de usuarios</li>
+                        <li><i class="fas fa-check text-gold mr-3"></i>Wireframes y prototipos</li>
+                        <li><i class="fas fa-check text-gold mr-3"></i>Diseño visual en Figma</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gold p-10 rounded-[2.5rem] text-black transform lg:scale-105 shadow-2xl shadow-gold/10">
+                    <p class="text-black/60 text-[10px] font-black mb-4 uppercase">Desde $800</p>
+                    <h4 class="text-2xl font-bold mb-4 italic uppercase">Desarrollo Web</h4>
+                    <p class="text-black/80 text-sm mb-8 leading-relaxed">Construyo sitios modernos y escalables usando las últimas tecnologías y código limpio.</p>
+                    <ul class="text-black/70 space-y-3 text-xs font-bold border-t border-black/10 pt-8">
+                        <li><i class="fas fa-check mr-3"></i>React / Next.js & TS</li>
+                        <li><i class="fas fa-check mr-3"></i>APIs REST & Node.js</li>
+                        <li><i class="fas fa-check mr-3"></i>Optimización SEO Full</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-10 rounded-[2.5rem] card-hover transition-all duration-500">
+                    <p class="text-gold text-[10px] font-black mb-4 uppercase">Desde $200/h</p>
+                    <h4 class="text-2xl font-bold mb-4 italic">Consultoría Digital</h4>
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">Analizo tu situación actual y te doy la hoja de ruta clara para escalar tu negocio.</p>
+                    <ul class="text-gray-400 space-y-3 text-xs font-medium border-t border-white/5 pt-8">
+                        <li><i class="fas fa-check text-gold mr-3"></i>Auditoría digital</li>
+                        <li><i class="fas fa-check text-gold mr-3"></i>Estrategia de producto</li>
+                        <li><i class="fas fa-check text-gold mr-3"></i>Roadmap tecnológico</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-10 rounded-[2.5rem] card-hover transition-all duration-500">
+                    <p class="text-gold text-[10px] font-black mb-4 uppercase">Desde $1200</p>
+                    <h4 class="text-2xl font-bold mb-4 italic text-gold">E-commerce</h4>
+                    <ul class="text-gray-400 space-y-3 text-xs mt-6">
+                        <li><i class="fas fa-shopping-cart text-gold mr-3"></i>Shopify / WooCommerce</li>
+                        <li><i class="fas fa-credit-card text-gold mr-3"></i>Pasarelas de pago</li>
+                        <li><i class="fas fa-chart-line text-gold mr-3"></i>Analytics & conversión</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-10 rounded-[2.5rem] card-hover transition-all duration-500">
+                    <p class="text-gold text-[10px] font-black mb-4 uppercase">Desde $300</p>
+                    <h4 class="text-2xl font-bold mb-4 italic text-gold">SEO & Performance</h4>
+                    <ul class="text-gray-400 space-y-3 text-xs mt-6">
+                        <li><i class="fas fa-rocket text-gold mr-3"></i>Optimización técnica</li>
+                        <li><i class="fas fa-search text-gold mr-3"></i>Estrategia de keywords</li>
+                        <li><i class="fas fa-bolt text-gold mr-3"></i>Core Web Vitals</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-10 rounded-[2.5rem] card-hover transition-all duration-500">
+                    <p class="text-gold text-[10px] font-black mb-4 uppercase">Desde $150/mes</p>
+                    <h4 class="text-2xl font-bold mb-4 italic text-gold">Mantenimiento Web</h4>
+                    <ul class="text-gray-400 space-y-3 text-xs mt-6">
+                        <li><i class="fas fa-shield-alt text-gold mr-3"></i>Seguridad & Backups</li>
+                        <li><i class="fas fa-headset text-gold mr-3"></i>Soporte prioritario</li>
+                        <li><i class="fas fa-sync text-gold mr-3"></i>Actualizaciones 24/7</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-[#050505] overflow-hidden">
+        <div class="container mx-auto px-6">
+            <h3 class="text-5xl font-black italic mb-24 text-center">Mi Trayectoria</h3>
+            
+            <div class="max-w-4xl mx-auto space-y-20 relative">
+                <div class="absolute h-full w-[1px] bg-gray-900 left-4 md:left-1/2"></div>
+                
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 text-left md:text-right mb-4 md:mb-0">
+                        <span class="text-gold font-black text-2xl">2025</span>
+                        <h4 class="text-xl font-bold uppercase tracking-widest mt-2">Técnico Sistemas & Full Stack</h4>
+                        <p class="text-gray-500 text-sm">AUTRADE Ciudad Real · ThePower</p>
+                    </div>
+                    <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gold rounded-full transform -translate-x-1.5 shadow-[0_0_10px_#D4AF37]"></div>
+                    <div class="md:w-1/2 md:pl-12 opacity-50 text-xs leading-relaxed">
+                        Técnico de Sistemas en AUTRADE (Sep–Dic 2025). Desarrollador Full Stack en ThePower (Mar 2025).
+                    </div>
+                </div>
+
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 text-left md:text-right mb-4 md:mb-0 order-1 md:order-2">
+                         <span class="text-gray-600 font-black text-2xl">2023–2024</span>
+                         <h4 class="text-xl font-bold uppercase tracking-widest mt-2">Freelance & Full Stack</h4>
+                         <p class="text-gray-500 text-sm">ThePower Business School</p>
+                    </div>
+                    <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gray-800 rounded-full transform -translate-x-1.5"></div>
+                    <div class="md:w-1/2 md:pl-12 order-2 md:order-1 opacity-50 text-xs leading-relaxed md:text-right">
+                        Proyectos end-to-end con React, Express, MongoDB y Node.js (Jun 2023–Dic 2023).
+                    </div>
+                </div>
+
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 text-left md:text-right mb-4 md:mb-0">
+                        <span class="text-gray-600 font-black text-2xl">2021–2022</span>
+                        <h4 class="text-xl font-bold uppercase tracking-widest mt-2">Formación Especializada</h4>
+                        <p class="text-gray-500 text-sm">Google · Fundación ONCE</p>
+                    </div>
+                    <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gray-800 rounded-full transform -translate-x-1.5"></div>
+                    <div class="md:w-1/2 md:pl-12 opacity-50 text-xs leading-relaxed">
+                        Apps Móviles, SEO, Marketing Digital y Seguridad Informática.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-32">
+        <div class="container mx-auto px-6">
+            <div class="glass max-w-6xl mx-auto rounded-[3rem] overflow-hidden grid md:grid-cols-2">
+                <div class="p-16 bg-gold text-black">
+                    <h2 class="text-6xl font-black italic mb-8 leading-none">¿Hablamos ahora?</h2>
+                    <p class="text-lg font-bold mb-12">goabad18@outlook.com</p>
+                    <div class="flex space-x-6 text-2xl">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="p-16 bg-white/5">
+                    <form action="#" class="space-y-6">
+                        <input type="text" placeholder="Nombre *" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black">
+                        <input type="email" placeholder="Email *" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black">
+                        <select class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black text-gray-500">
+                            <option>Selecciona un servicio</option>
+                            <option>Desarrollo Web</option>
+                            <option>UI/UX Design</option>
+                        </select>
+                        <textarea placeholder="Mensaje *" rows="4" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black"></textarea>
+                        <button class="w-full bg-gold text-black font-black py-5 rounded-2xl mt-10 hover:bg-white transition uppercase text-[10px] tracking-[0.2em]">Enviar mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5 text-center">
+        <div class="text-2xl font-black uppercase mb-8">
+            <span class="text-gold">Gonzalo</span> Abad
+        </div>
+        <p class="text-[10px] uppercase tracking-[0.6em] text-gray-600">© 2026 Gonzalo Abad Alonso. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
-  </html>
- 
+</html>
