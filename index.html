@@ -193,6 +193,49 @@
 
         </div>
     </div>
+        <section class="py-20 bg-[#050505] border-t border-b border-white/5">
+    <div class="container mx-auto px-6 mb-12">
+        <p class="text-[10px] font-black uppercase tracking-[0.5em] text-gold text-center">Instituciones y Partners</p>
+    </div>
+
+    <div class="relative flex overflow-x-hidden group">
+        <div class="py-12 animate-marquee whitespace-nowrap flex items-center">
+            
+            <div class="flex items-center space-x-16 md:space-x-32 px-8">
+                <img src="[attachment_0](attachment)" alt="Autrade" class="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="[attachment_2](attachment)" alt="ThePower Business School" class="h-10 md:h-14 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="[attachment_3](attachment)" alt="Google" class="h-8 md:h-12 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="[attachment_1](attachment)" alt="Fundación ONCE" class="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+            </div>
+            
+            <div class="flex items-center space-x-16 md:space-x-32 px-8">
+                <img src="[attachment_0](attachment)" alt="Autrade" class="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="[attachment_2](attachment)" alt="ThePower Business School" class="h-10 md:h-14 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="[attachment_3](attachment)" alt="Google" class="h-8 md:h-12 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="[attachment_1](attachment)" alt="Fundación ONCE" class="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+            </div>
+        </div>
+
+        <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#050505] to-transparent z-10"></div>
+        <div class="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#050505] to-transparent z-10"></div>
+    </div>
+</section>
+
+<style>
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+        display: flex;
+        width: max-content;
+        animation: marquee 40s linear infinite; /* Un poco más lento para que se aprecien los logos */
+    }
+    .group:hover .animate-marquee {
+        animation-play-state: paused;
+    }
+</style>
+
 </section>
  <section id="servicios" class="py-32">
 
