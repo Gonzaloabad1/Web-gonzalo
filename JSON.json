@@ -4,3 +4,29 @@
   "servicio": "Desarrollo Web",
   "mensaje": "Hola Gonzalo, me gustaría trabajar contigo en un proyecto."
 }
+export const Sidebar = () => `
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <h3>Mis Apps</h3>
+  </div>
+  <nav class="sidebar-nav">
+    <ul>
+      <li>
+        <a href="https://tu-app-1.vercel.app/" target="_blank">
+          <i class="icon">🚀</i> <span>App Clima</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://tu-app-2.vercel.app/" target="_blank">
+          <i class="icon">📊</i> <span>Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://tu-app-3.vercel.app/" target="_blank">
+          <i class="icon">🎨</i> <span>Editor UI</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+`;
