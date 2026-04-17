@@ -47,6 +47,50 @@
         html {
             scroll-behavior: smooth;
         }
+        .sidebar {
+  position: fixed;
+  left: 0;
+  top: 80px; /* Debajo de tu navbar actual */
+  width: 200px;
+  height: calc(100vh - 80px);
+  background: #111; /* Negro muy oscuro */
+  border-right: 1px solid #333;
+  padding: 20px;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 20px;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.sidebar-nav a:hover {
+  color: #D4AF37; /* Tu dorado */
+}
+
+/* Para que en el móvil no ocupe toda la pantalla */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px; /* Solo iconos en móvil */
+  }
+  .sidebar span {
+    display: none;
+  }
+}
     </style>
 </head>
 <body class="bg-black text-white font-sans selection:bg-gold selection:text-black">
