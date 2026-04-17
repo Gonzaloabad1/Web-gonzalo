@@ -47,50 +47,7 @@
         html {
             scroll-behavior: smooth;
         }
-        .sidebar {
-  position: fixed;
-  left: 0;
-  top: 80px; /* Debajo de tu navbar actual */
-  width: 200px;
-  height: calc(100vh - 80px);
-  background: #111; /* Negro muy oscuro */
-  border-right: 1px solid #333;
-  padding: 20px;
-  transition: all 0.3s ease;
-  z-index: 10;
-}
-
-.sidebar-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar-nav li {
-  margin-bottom: 20px;
-}
-
-.sidebar-nav a {
-  text-decoration: none;
-  color: #888;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.9rem;
-}
-
-.sidebar-nav a:hover {
-  color: #D4AF37; /* Tu dorado */
-}
-
-/* Para que en el móvil no ocupe toda la pantalla */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 60px; /* Solo iconos en móvil */
-  }
-  .sidebar span {
-    display: none;
-  }
-}
+ 
     </style>
 </head>
 <body class="bg-black text-white font-sans selection:bg-gold selection:text-black">
@@ -275,6 +232,50 @@
     }
 </style>
 
+</section>
+    <section id="apps" class="py-24 bg-[#030303] border-t border-white/5">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-4">Laboratorio</h2>
+            <h3 class="text-5xl font-black italic">Apps Interactivas</h3>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-8 items-start">
+            <aside class="w-full md:w-64 glass rounded-3xl p-6">
+                <h4 class="text-[10px] font-black uppercase tracking-widest text-gold mb-6 border-b border-gold/20 pb-2">Selecciona App</h4>
+                <nav class="space-y-4">
+                    <a href="https://tu-app-1.vercel.app/" target="_blank" class="flex items-center gap-3 text-sm text-gray-400 hover:text-gold transition-all group">
+                        <span class="bg-white/5 p-2 rounded-lg group-hover:bg-gold/10">🚀</span>
+                        <span class="font-bold">App Clima</span>
+                    </a>
+                    <a href="https://tu-app-2.vercel.app/" target="_blank" class="flex items-center gap-3 text-sm text-gray-400 hover:text-gold transition-all group">
+                        <span class="bg-white/5 p-2 rounded-lg group-hover:bg-gold/10">📊</span>
+                        <span class="font-bold">Dashboard</span>
+                    </a>
+                    <a href="https://tu-app-3.vercel.app/" target="_blank" class="flex items-center gap-3 text-sm text-gray-400 hover:text-gold transition-all group">
+                        <span class="bg-white/5 p-2 rounded-lg group-hover:bg-gold/10">🎨</span>
+                        <span class="font-bold">Editor UI</span>
+                    </a>
+                </nav>
+            </aside>
+
+            <div class="flex-1 glass rounded-3xl p-10 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <i class="fas fa-code text-9xl text-gold"></i>
+                </div>
+                <div class="relative z-10">
+                    <h4 class="text-2xl font-black mb-4 uppercase tracking-tighter italic">Entorno de Pruebas</h4>
+                    <p class="text-gray-400 leading-relaxed mb-8 max-w-xl">
+                        Estas aplicaciones son entornos experimentales donde pongo a prueba nuevas tecnologías como React Server Components, animaciones avanzadas y optimización de bases de datos. 
+                    </p>
+                    <div class="flex gap-4">
+                        <span class="text-[9px] font-black uppercase tracking-widest px-3 py-1 bg-white/5 border border-white/10 rounded-full text-gray-500">Real-time</span>
+                        <span class="text-[9px] font-black uppercase tracking-widest px-3 py-1 bg-white/5 border border-white/10 rounded-full text-gray-500">API Rest</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
  <section id="servicios" class="py-32">
 
