@@ -12,38 +12,31 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        gold: '#D4AF37',
-                    }
+                    colors: { gold: '#D4AF37' }
                 }
             }
         }
     </script>
     <style>
-        :root {
-            --gold: #D4AF37;
-            --dark-gold: #996515;
-        }
-
+        :root { --gold: #D4AF37; }
         .glass {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
             border: 1px solid rgba(212, 175, 55, 0.1);
         }
-
         .gold-gradient-text {
             background: linear-gradient(to right, #D4AF37, #FBEAA1, #996515);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        .card-hover:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05);
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
+        .card-hover:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+        }
         @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -51,111 +44,147 @@
         .animate-marquee {
             display: flex;
             width: max-content;
-            animation: marquee 40s linear infinite;
-        }
-        .group:hover .animate-marquee {
-            animation-play-state: paused;
+            animation: marquee 30s linear infinite;
         }
     </style>
 </head>
-<body class="bg-black text-white font-sans selection:bg-gold selection:text-black">
+<body class="bg-[#020202] text-white font-sans selection:bg-gold selection:text-black">
 
     <nav class="fixed w-full z-50 glass py-4 border-b border-white/5">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <div class="flex flex-col leading-none">
-                <div class="text-xl md:text-2xl font-black uppercase tracking-tighter text-white">
-                    <span class="text-gold">Gonzalo</span> Abad <span class="text-gold">Alonso</span>
+                <div class="text-xl font-black uppercase tracking-tighter">
+                    <span class="text-gold">Gonzalo</span> Abad
                 </div>
-                <div class="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.4em] text-gray-500 mt-1.5">
-                    <span class="text-gold/80">Fullstack Designer</span> & Developer
+                <div class="text-[9px] font-bold uppercase tracking-[0.3em] text-gray-500 mt-1">
+                    Fullstack Designer & Developer
                 </div>
             </div>
-
-            <div class="hidden md:flex items-center space-x-10">
-                <div class="flex space-x-8 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
-                    <a href="#inicio" class="hover:text-gold transition-colors duration-300">Inicio</a>
-                    <a href="#sobre-mi" class="hover:text-gold transition-colors duration-300">Quién Soy</a>
-                    <a href="#servicios" class="hover:text-gold transition-colors duration-300">Servicios</a>
-                    <a href="https://my-portfolio-ilc9-w0xf.vercel.app/" target="_blank" class="hover:text-gold transition-colors duration-300 underline decoration-gold/40 underline-offset-8">Portfolio</a>
-                </div>
-                <a href="#contacto" class="bg-gold text-black px-7 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all duration-300 shadow-lg shadow-gold/10">
-                    Contáctame
-                </a>
+            <div class="hidden md:flex items-center space-x-8 text-[10px] font-black uppercase tracking-widest">
+                <a href="#inicio" class="hover:text-gold transition">Inicio</a>
+                <a href="#sobre-mi" class="hover:text-gold transition">Bio</a>
+                <a href="#servicios" class="hover:text-gold transition">Servicios</a>
+                <a href="#contacto" class="bg-gold text-black px-6 py-2 rounded-full hover:bg-white transition">Contacto</a>
             </div>
         </div>
     </nav>
 
-    <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
-        <div class="absolute w-[500px] h-[500px] bg-gold/5 rounded-full blur-[120px] -top-20 -right-20"></div>
-        <div class="container mx-auto px-6 text-center relative z-10">
-            <p class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-8">+50 proyectos entregados</p>
-            <h1 class="text-6xl md:text-9xl font-black mb-8 leading-none tracking-tighter">
-                Donde el <span class="gold-gradient-text italic">código</span> <br> cobra vida
+    <section id="inicio" class="min-h-screen flex items-center justify-center relative overflow-hidden px-6">
+        <div class="absolute w-[600px] h-[600px] bg-gold/5 rounded-full blur-[120px] -top-40 -right-40"></div>
+        <div class="text-center relative z-10 mt-20">
+            <span class="text-gold text-[10px] font-black uppercase tracking-[0.6em] mb-6 block">Madrid · Ciudad Real · Remoto</span>
+            <h1 class="text-6xl md:text-9xl font-black mb-8 tracking-tighter leading-[0.9]">
+                CÓDIGO CON <br> <span class="gold-gradient-text italic">ALMA DIGITAL</span>
             </h1>
-            <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl mb-12 font-light">
-                Soy Gonzalo Abad — Fullstack Designer & Developer. Construyo productos digitales donde cada píxel tiene intención y cada línea de código tiene propósito.
+            <p class="max-w-2xl mx-auto text-gray-400 text-lg font-light mb-12">
+                Especialista en convertir ideas complejas en interfaces minimalistas y robustas. 
+                Fullstack con enfoque en diseño de alto impacto.
             </p>
-            <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="#servicios" class="bg-gold text-black px-12 py-5 rounded-full font-black text-sm uppercase tracking-widest hover:bg-white transition">Ver mis servicios</a>
-                <a href="#contacto" class="border border-gold/50 text-gold px-12 py-5 rounded-full font-black text-sm uppercase tracking-widest hover:bg-gold hover:text-black transition">Hablemos</a>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#servicios" class="bg-gold text-black px-10 py-4 rounded-full font-black text-xs uppercase tracking-widest hover:scale-105 transition">Mis Servicios</a>
+                <a href="#contacto" class="border border-gold/30 text-white px-10 py-4 rounded-full font-black text-xs uppercase tracking-widest hover:bg-gold/10 transition">Hablemos</a>
             </div>
         </div>
     </section>
 
     <section id="sobre-mi" class="py-32 bg-[#030303]">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-20 items-center mb-32">
-                <div class="relative group">
-                    <img src="https://raw.githubusercontent.com/Gonzaloabad1/Web-gonzalo/refs/heads/main/Foto%2Bautor.jpg" alt="Gonzalo Abad" class="rounded-3xl grayscale group-hover:grayscale-0 transition duration-1000 border border-white/10 w-full object-cover">
-                    <div class="absolute -bottom-6 -right-6 glass p-8 rounded-2xl">
-                        <span class="text-gold text-4xl font-black italic">80+</span>
-                        <p class="text-[10px] uppercase font-bold tracking-widest text-gray-400">Proyectos completados</p>
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                    <img src="https://raw.githubusercontent.com/Gonzaloabad1/Web-gonzalo/refs/heads/main/Foto%2Bautor.jpg" class="rounded-2xl grayscale border border-white/10 shadow-2xl">
+                    <div class="absolute -bottom-10 -right-10 glass p-8 rounded-2xl hidden md:block">
+                        <p class="text-gold text-5xl font-black italic">12+</p>
+                        <p class="text-[9px] uppercase font-black tracking-widest text-gray-500">Años de evolución</p>
                     </div>
                 </div>
                 <div>
-                    <h2 class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-4">Sobre mí</h2>
-                    <h3 class="text-5xl font-black mb-8 italic">Hola! Soy Gonzalo Abad Alonso</h3>
-                    <p class="text-gray-400 text-lg leading-relaxed mb-10">
-                        Técnico de Sistemas Microinformáticos y Fullstack Designer & Developer con experiencia tanto en el front-end como el back-end para construir ideas en presencias digitales.
+                    <h2 class="text-gold text-xs font-black uppercase tracking-[0.4em] mb-4">La Persona</h2>
+                    <h3 class="text-5xl font-black mb-6 italic">Gonzalo Abad Alonso</h3>
+                    <p class="text-gray-400 text-lg mb-10 leading-relaxed">
+                        Técnico de Sistemas y Desarrollador Fullstack. Mi enfoque híbrido me permite entender tanto la infraestructura del servidor como la psicología del usuario en el navegador.
                     </p>
-                    <div class="space-y-6">
-                        <div class="group">
-                            <div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest"><span>UI/UX Design</span> <span>92%</span></div>
-                            <div class="h-[2px] w-full bg-gray-900"><div class="h-full bg-gold" style="width: 92%"></div></div>
+                    
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-[10px] font-black uppercase tracking-widest">
+                                <span>UX/UI & Figma</span> <span class="text-gold">92%</span>
+                            </div>
+                            <div class="h-[1px] bg-white/10"><div class="h-full bg-gold w-[92%]"></div></div>
                         </div>
-                        <div class="group">
-                            <div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest"><span>React / TypeScript</span> <span>90%</span></div>
-                            <div class="h-[2px] w-full bg-gray-900"><div class="h-full bg-gold" style="width: 90%"></div></div>
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-[10px] font-black uppercase tracking-widest">
+                                <span>React & Next.js</span> <span class="text-gold">90%</span>
+                            </div>
+                            <div class="h-[1px] bg-white/10"><div class="h-full bg-gold w-[90%]"></div></div>
                         </div>
-                        <div class="group">
-                            <div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest"><span>HTML5 / CSS / Tailwind</span> <span>95%</span></div>
-                            <div class="h-[2px] w-full bg-gray-900"><div class="h-full bg-gold" style="width: 95%"></div></div>
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-[10px] font-black uppercase tracking-widest">
+                                <span>Node & Backend</span> <span class="text-gold">85%</span>
+                            </div>
+                            <div class="h-[1px] bg-white/10"><div class="h-full bg-gold w-[85%]"></div></div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="max-w-4xl mx-auto space-y-20 relative pt-20">
-                <h3 class="text-5xl font-black italic mb-24 text-center">Mi Trayectoria</h3>
-                <div class="absolute h-full w-[1px] bg-gray-900 left-4 md:left-1/2"></div>
-                
-                <div class="relative flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 md:pr-12 text-left md:text-right mb-4 md:mb-0">
-                        <span class="text-gold font-black text-2xl uppercase tracking-tighter">2025</span>
-                        <h4 class="text-xl font-bold uppercase tracking-widest mt-2">Técnico & Full Stack</h4>
-                        <p class="text-gold/60 text-[10px] font-black uppercase tracking-widest">AUTRADE · ThePower</p>
-                    </div>
-                    <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gold rounded-full transform -translate-x-1.5"></div>
-                    <div class="md:w-1/2 md:pl-12 text-gray-400 text-xs">Gestión de infraestructura y desarrollo integral de soluciones de software.</div>
-                </div>
-                
-                </div>
         </div>
     </section>
 
-    <section class="py-20 bg-[#050505] border-t border-b border-white/5">
-        <div class="relative flex overflow-x-hidden group">
-            <div class="py-12 animate-marquee whitespace-nowrap flex items-center">
-                <div class="flex items-center space-x-16 md:space-x-32 px-8">
-                    <img src="https://www.autrade.info/wp-content/uploads/go-x/u/c090b600-199b-4989-8eb2-fe97837d31ce/image.png" alt="Autrade" class="h-12 grayscale opacity-50 hover:opacity-100 transition">
-                    <img src="https://cdn.cookielaw.org/logos/d68cb926-0a85-4faf-9276-055bcd06771f/e25ebf54-ff84-447f-9c00-02bc70f9a05f/9e9a6463-f5d8-459e-928a-72a7722e523d/Principal.png" alt="ThePower" class="h-10 grayscale opacity-50 hover:opacity-1
+    <section id="servicios" class="py-32 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-gold text-xs font-black uppercase tracking-[0.5em] mb-4">¿Qué hago?</h2>
+                <h3 class="text-5xl font-black italic">Soluciones End-to-End</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-10 rounded-3xl card-hover border-t-4 border-t-gold/20">
+                    <div class="text-gold text-3xl mb-6"><i class="fas fa-layer-group"></i></div>
+                    <h4 class="text-xl font-black uppercase mb-4 tracking-tighter">UI/UX Design</h4>
+                    <p class="text-gray-500 text-sm mb-6">Interfaces pensadas para convertir visitas en clientes reales.</p>
+                    <ul class="text-[10px] font-bold uppercase tracking-widest space-y-3 text-gray-400">
+                        <li><i class="fas fa-check text-gold mr-2"></i> Prototipado Figma</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i> User Research</li>
+                    </ul>
+                </div>
+
+                <div class="bg-gold p-10 rounded-3xl text-black transform md:scale-105 shadow-2xl shadow-gold/20">
+                    <div class="text-3xl mb-6"><i class="fas fa-code"></i></div>
+                    <h4 class="text-xl font-black uppercase mb-4 tracking-tighter">Desarrollo Web</h4>
+                    <p class="text-black/70 text-sm mb-6 font-medium">Aplicaciones rápidas, seguras y optimizadas para Google.</p>
+                    <ul class="text-[10px] font-black uppercase tracking-widest space-y-3">
+                        <li><i class="fas fa-check mr-2"></i> React / Next.js</li>
+                        <li><i class="fas fa-check mr-2"></i> SEO Avanzado</li>
+                    </ul>
+                </div>
+
+                <div class="glass p-10 rounded-3xl card-hover border-t-4 border-t-gold/20">
+                    <div class="text-gold text-3xl mb-6"><i class="fas fa-rocket"></i></div>
+                    <h4 class="text-xl font-black uppercase mb-4 tracking-tighter">Consultoría</h4>
+                    <p class="text-gray-500 text-sm mb-6">Optimización de stack tecnológico y hoja de ruta digital.</p>
+                    <ul class="text-[10px] font-bold uppercase tracking-widest space-y-3 text-gray-400">
+                        <li><i class="fas fa-check text-gold mr-2"></i> Auditoría Técnica</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i> Escalabilidad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="py-20 border-t border-white/5 bg-[#010101]">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-4xl md:text-6xl font-black mb-8 italic">¿Listo para empezar?</h3>
+            <a href="mailto:goabad18@outlook.com" class="text-gold text-xl md:text-2xl font-light hover:text-white transition underline underline-offset-8">goabad18@outlook.com</a>
+            
+            <div class="flex justify-center space-x-8 mt-16 opacity-50">
+                <a href="https://linkedin.com/in/gonzaloabadalonso" target="_blank" class="hover:text-gold transition"><i class="fab fa-linkedin text-2xl"></i></a>
+                <a href="https://github.com/Gonzaloabad1" target="_blank" class="hover:text-gold transition"><i class="fab fa-github text-2xl"></i></a>
+            </div>
+            
+            <p class="text-[9px] uppercase tracking-[0.5em] text-gray-700 mt-20">
+                © 2026 Gonzalo Abad Alonso · Hecho con Soul & Code
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
