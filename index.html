@@ -44,7 +44,6 @@
             box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05);
         }
 
-        /* Estilos específicos para los botones del laboratorio */
         .btn-lab {
             flex: 1;
             display: flex;
@@ -65,9 +64,9 @@
             transform: translateY(-3px);
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { display: flex; width: max-content; animation: marquee 40s linear infinite; }
+        .group:hover .animate-marquee { animation-play-state: paused; }
     </style>
 </head>
 <body class="bg-black text-white font-sans selection:bg-gold selection:text-black">
@@ -75,13 +74,10 @@
 <nav class="fixed w-full z-50 glass py-4 border-b border-white/5">
     <div class="container mx-auto px-6 flex justify-between items-center">
         <div class="flex flex-col leading-none">
-            <div class="text-xl md:text-2xl font-black uppercase tracking-tighter text-white">
-                <div class="text-xl md:text-2xl font-black uppercase tracking-tighter text-white flex items-center">
-                    <div class="text-2xl font-black uppercase tracking-tighter">
-  <span class="text-gold">Gonzalo</span>
-  <span class="text-white">Abad</span>
-  <span class="text-gold">Alonso</span>
-</div>
+            <div class="text-xl md:text-2xl font-black uppercase tracking-tighter">
+                <span class="text-gold">Gonzalo</span>
+                <span class="text-white">Abad</span>
+                <span class="text-gold">Alonso</span>
             </div>
             <div class="text-[8px] md:text-[10px] font-bold uppercase tracking-[0.4em] text-gray-500 mt-1.5">
                 <span class="text-gold/80">Fullstack Designer</span> & Developer
@@ -181,43 +177,19 @@
                     </div>
                 </div>
 
-   <div class="relative flex flex-col md:flex-row items-center">
-    <div class="md:w-1/2 md:pr-12 text-left md:text-right mb-4 md:mb-0">
-        <span class="text-white font-black text-2xl uppercase tracking-tight">2012–2023</span>
-        <h4 class="text-xl font-bold uppercase tracking-widest mt-1 leading-tight">
-            Sistemas Microinformáticos <br> y Redes (SMR)
-        </h4>
-        <p class="text-gray-500 text-[10px] font-black uppercase tracking-widest mt-1 italic">
-            Formación Técnica Dual
-        </p>
-    </div>
-    
-    <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gray-800 rounded-full transform -translate-x-1.5 border border-gray-700"></div>
-    
-    <div class="md:w-1/2 md:pl-12 text-gray-400 text-xs leading-relaxed">
-        <p>Especialización técnica realizada entre el <strong class="text-white">IES Azarquiel</strong> (Toledo) y el <strong class="text-white">IES Maestre de Calatrava</strong> (Ciudad Real), cubriendo el ciclo completo de redes y sistemas.</p>
-    </div>
-</div>
-                        </ul>
+                <div class="relative flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 text-left md:text-right mb-4 md:mb-0">
+                        <span class="text-white font-black text-2xl uppercase tracking-tight">2012–2023</span>
+                        <h4 class="text-xl font-bold uppercase tracking-widest mt-1 leading-tight">
+                            Sistemas Microinformáticos <br> y Redes (SMR)
+                        </h4>
+                        <p class="text-gray-500 text-[10px] font-black uppercase tracking-widest mt-1 italic">
+                            Formación Técnica Dual
+                        </p>
                     </div>
-                </div>
-    </div>
-</section>
-
-<section class="py-20 bg-[#050505] border-t border-b border-white/5">
-    <div class="container mx-auto px-6 mb-12">
-        <p class="text-[10px] font-black uppercase tracking-[0.5em] text-gold text-center">Instituciones y Partners</p>
-    </div>
-    <div class="relative flex overflow-x-hidden group">
-        <div class="py-12 animate-marquee whitespace-nowrap flex items-center">
-            <div class="flex items-center space-x-16 md:space-x-32 px-8">
-                <img src="https://www.autrade.info/wp-content/uploads/go-x/u/c090b600-199b-4989-8eb2-fe97837d31ce/image.png" alt="Autrade" class="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
-                <img src="https://cdn.cookielaw.org/logos/d68cb926-0a85-4faf-9276-055bcd06771f/e25ebf54-ff84-447f-9c00-02bc70f9a05f/9e9a6463-f5d8-459e-928a-72a7722e523d/Principal.png" alt="ThePower Business School" class="h-10 md:h-14 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
-                <img src="https://www.idsplus.net/wp-content/uploads/new-google-logo-2015.png" alt="Google" class="h-8 md:h-12 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
-               <img src="data:image/png;base64,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" alt="Fundación Universidad Empresa" class="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
-                
-                <img src="https://www.gazteaukera.euskadi.eus/contenidos/convocatoria/convocatoria_1649148672762/es_def/logo.png" alt="Fundación ONCE" class="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
-                        </ul>
+                    <div class="absolute left-4 md:left-1/2 w-3 h-3 bg-gray-800 rounded-full transform -translate-x-1.5 border border-gray-700"></div>
+                    <div class="md:w-1/2 md:pl-12 text-gray-400 text-xs leading-relaxed">
+                        <p>Especialización técnica realizada entre el <strong class="text-white">IES Azarquiel</strong> (Toledo) y el <strong class="text-white">IES Maestre de Calatrava</strong> (Ciudad Real).</p>
                     </div>
                 </div>
             </div>
@@ -225,9 +197,23 @@
     </div>
 </section>
 
-
-    
-                
+<section class="py-20 bg-[#050505] border-t border-b border-white/5 overflow-hidden">
+    <div class="container mx-auto px-6 mb-12">
+        <p class="text-[10px] font-black uppercase tracking-[0.5em] text-gold text-center">Instituciones y Partners</p>
+    </div>
+    <div class="relative flex group">
+        <div class="py-12 animate-marquee whitespace-nowrap flex items-center">
+            <div class="flex items-center space-x-16 md:space-x-32 px-8">
+                <img src="https://www.autrade.info/wp-content/uploads/go-x/u/c090b600-199b-4989-8eb2-fe97837d31ce/image.png" alt="Autrade" class="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="https://cdn.cookielaw.org/logos/d68cb926-0a85-4faf-9276-055bcd06771f/e25ebf54-ff84-447f-9c00-02bc70f9a05f/9e9a6463-f5d8-459e-928a-72a7722e523d/Principal.png" alt="ThePower" class="h-10 md:h-14 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="https://www.idsplus.net/wp-content/uploads/new-google-logo-2015.png" alt="Google" class="h-8 md:h-12 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="https://www.gazteaukera.euskadi.eus/contenidos/convocatoria/convocatoria_1649148672762/es_def/logo.png" alt="ONCE" class="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+            </div>
+            <div class="flex items-center space-x-16 md:space-x-32 px-8">
+                <img src="https://www.autrade.info/wp-content/uploads/go-x/u/c090b600-199b-4989-8eb2-fe97837d31ce/image.png" alt="Autrade" class="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="https://cdn.cookielaw.org/logos/d68cb926-0a85-4faf-9276-055bcd06771f/e25ebf54-ff84-447f-9c00-02bc70f9a05f/9e9a6463-f5d8-459e-928a-72a7722e523d/Principal.png" alt="ThePower" class="h-10 md:h-14 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="https://www.idsplus.net/wp-content/uploads/new-google-logo-2015.png" alt="Google" class="h-8 md:h-12 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
+                <img src="https://www.gazteaukera.euskadi.eus/contenidos/convocatoria/convocatoria_1649148672762/es_def/logo.png" alt="ONCE" class="h-12 md:h-16 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-500">
             </div>
         </div>
         <div class="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#050505] to-transparent z-10"></div>
@@ -235,19 +221,12 @@
     </div>
 </section>
 
-<style>
-    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .animate-marquee { display: flex; width: max-content; animation: marquee 40s linear infinite; }
-    .group:hover .animate-marquee { animation-play-state: paused; }
-</style>
-
 <section id="apps" class="py-24 bg-[#030303] border-t border-white/5">
     <div class="container mx-auto px-6">
         <div class="text-center mb-16">
             <h2 class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-4">Laboratorio</h2>
             <h3 class="text-5xl font-black italic">Apps Interactivas</h3>
         </div>
-
         <div class="flex flex-col md:flex-row gap-8 items-start">
             <aside class="w-full md:w-64 glass rounded-3xl p-6">
                 <h4 class="text-[10px] font-black uppercase tracking-widest text-gold mb-6 border-b border-gold/20 pb-2">Selecciona App</h4>
@@ -266,7 +245,6 @@
                     </a>
                 </nav>
             </aside>
-
             <div class="flex-1 glass rounded-3xl p-10 relative overflow-hidden group">
                 <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
                     <i class="fas fa-code text-9xl text-gold"></i>
@@ -274,13 +252,12 @@
                 <div class="relative z-10">
                     <h4 class="text-2xl font-black mb-4 uppercase tracking-tighter italic">Entorno de Pruebas</h4>
                     <p class="text-gray-400 leading-relaxed mb-8 max-w-xl">
-                        Estas aplicaciones son entornos experimentales donde pongo a prueba nuevas tecnologías como React Server Components, animaciones avanzadas y optimización de bases de datos. 
+                        Estas aplicaciones son entornos experimentales donde pongo a prueba nuevas tecnologías como React Server Components y animaciones avanzadas.
                     </p>
                     <div class="flex gap-4 mb-10">
                         <span class="text-[9px] font-black uppercase tracking-widest px-3 py-1 bg-white/5 border border-white/10 rounded-full text-gray-500">Real-time</span>
                         <span class="text-[9px] font-black uppercase tracking-widest px-3 py-1 bg-white/5 border border-white/10 rounded-full text-gray-500">API Rest</span>
                     </div>
-                    
                     <div class="flex flex-col md:flex-row gap-4 border-t border-white/5 pt-8">
                         <a href="https://github.com/Gonzaloabad1?tab=repositories" target="_blank" class="btn-lab">
                             <i class="fab fa-github text-2xl text-white mb-2 group-hover:text-gold"></i>
@@ -289,7 +266,6 @@
                                 <strong class="block text-[10px] tracking-widest uppercase font-black">Repositorios</strong>
                             </div>
                         </a>
-                        
                         <a href="https://codepen.io/your-work" target="_blank" class="btn-lab">
                             <i class="fab fa-codepen text-2xl text-white mb-2 group-hover:text-gold"></i>
                             <div class="text-center">
@@ -307,40 +283,34 @@
 <section id="servicios" class="py-32">
     <div class="container mx-auto px-6">
         <div class="text-center mb-24">
-            <h2 class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-4 text-center">Mis Servicios</h2>
+            <h2 class="text-gold text-xs font-bold uppercase tracking-[0.5em] mb-4">Mis Servicios</h2>
             <h3 class="text-5xl font-black italic">Soluciones Digitales</h3>
         </div>
-        
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="glass p-10 rounded-[2.5rem] card-hover transition-all duration-500">
                 <p class="text-gold text-[10px] font-black mb-4 uppercase">Desde 60€/hora</p>
                 <h4 class="text-2xl font-bold mb-4 italic">UI/UX Design</h4>
-                <p class="text-gray-500 text-sm mb-8 leading-relaxed">Diseño interfaces atractivas que crean experiencias memorables y maximizan la conversión.</p>
+                <p class="text-gray-500 text-sm mb-8 leading-relaxed">Diseño interfaces atractivas que crean experiencias memorables.</p>
                 <ul class="text-gray-400 space-y-3 text-xs font-medium border-t border-white/5 pt-8">
                     <li><i class="fas fa-check text-gold mr-3"></i>Investigación de usuarios</li>
                     <li><i class="fas fa-check text-gold mr-3"></i>Wireframes y prototipos</li>
-                    <li><i class="fas fa-check text-gold mr-3"></i>Diseño visual en Figma</li>
                 </ul>
             </div>
-
             <div class="bg-gold p-10 rounded-[2.5rem] text-black transform lg:scale-105 shadow-2xl shadow-gold/10">
                 <p class="text-black/60 text-[10px] font-black mb-4 uppercase">Desde 400€</p>
                 <h4 class="text-2xl font-bold mb-4 italic uppercase">Desarrollo Web</h4>
-                <p class="text-black/80 text-sm mb-8 leading-relaxed">Construyo sitios modernos y escalables usando las últimas tecnologías y código limpio.</p>
+                <p class="text-black/80 text-sm mb-8 leading-relaxed">Construyo sitios modernos y escalables usando código limpio.</p>
                 <ul class="text-black/70 space-y-3 text-xs font-bold border-t border-black/10 pt-8">
                     <li><i class="fas fa-check mr-3"></i>React / Next.js & TS</li>
-                    <li><i class="fas fa-check mr-3"></i>APIs REST & Node.js</li>
                     <li><i class="fas fa-check mr-3"></i>Optimización SEO Full</li>
                 </ul>
             </div>
-
             <div class="glass p-10 rounded-[2.5rem] card-hover transition-all duration-500">
                 <p class="text-gold text-[10px] font-black mb-4 uppercase">Desde 60€/hora</p>
                 <h4 class="text-2xl font-bold mb-4 italic">Consultoría Digital</h4>
-                <p class="text-gray-500 text-sm mb-8 leading-relaxed">Análisis profundo de infraestructura y estrategia digital para escalar negocios sin fricción técnica.</p>
+                <p class="text-gray-500 text-sm mb-8 leading-relaxed">Análisis profundo de infraestructura y estrategia digital.</p>
                 <ul class="text-gray-400 space-y-3 text-xs font-medium border-t border-white/5 pt-8">
                     <li><i class="fas fa-check text-gold mr-3"></i>Auditoría digital</li>
-                    <li><i class="fas fa-check text-gold mr-3"></i>Estrategia de producto</li>
                     <li><i class="fas fa-check text-gold mr-3"></i>Roadmap tecnológico</li>
                 </ul>
             </div>
@@ -354,21 +324,15 @@
             <div class="p-16 bg-gold text-black">
                 <h2 class="text-6xl font-black italic mb-8 leading-none">¿Hablamos ahora?</h2>
                 <div class="space-y-4 mb-12">
-  <a href="mailto:goabad18@outlook.com" class="flex items-center gap-3 text-lg font-bold hover:text-blue-600 transition-colors">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 flex-shrink-0 text-gray-600">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-    </svg>
-    <span>goabad18@outlook.com</span>
-  </a>
-
-  <a href="tel:673159579" class="flex items-center gap-3 text-lg font-bold hover:text-blue-600 transition-colors">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 flex-shrink-0 text-gray-600">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-    </svg>
-    <span>673 159 579</span>
-  </a>
-</div>
-
+                    <a href="mailto:goabad18@outlook.com" class="flex items-center gap-3 text-lg font-bold hover:opacity-70 transition-opacity">
+                        <i class="fas fa-envelope text-xl"></i>
+                        <span>goabad18@outlook.com</span>
+                    </a>
+                    <a href="tel:673159579" class="flex items-center gap-3 text-lg font-bold hover:opacity-70 transition-opacity">
+                        <i class="fas fa-phone text-xl"></i>
+                        <span>673 159 579</span>
+                    </a>
+                </div>
                 <div class="flex space-x-6 text-2xl">
                     <a href="https://www.linkedin.com/in/gonzaloabadalonso" target="_blank" class="hover:scale-110 transition"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/Gonzaloabad1" target="_blank" class="hover:scale-110 transition"><i class="fab fa-github"></i></a>
@@ -383,7 +347,6 @@
                         <option value="Desarrollo Web">Desarrollo Web</option>
                         <option value="UI/UX Design">UI/UX Design</option>
                         <option value="Consultoria">Consultoría Digital</option>
-                        <option value="E-commerce">E-commerce</option>
                     </select>
                     <textarea name="mensaje" required placeholder="Mensaje *" rows="4" class="w-full bg-transparent border-b border-white/10 py-4 focus:border-gold outline-none transition uppercase text-[10px] tracking-widest font-black"></textarea>
                     <button type="submit" class="w-full bg-gold text-black font-black py-5 rounded-2xl mt-10 hover:bg-white transition uppercase text-[10px] tracking-[0.2em]">Enviar mensaje</button>
@@ -398,7 +361,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             <div class="space-y-6">
                 <div class="text-2xl font-black uppercase tracking-tighter">
-                    <span class="text-gold">Gonzalo</span> Abad
+                    <span class="text-gold">Gonzalo</span>
+                    <span class="text-white">Abad</span>
+                    <span class="text-gold">Alonso</span>
                 </div>
                 <p class="text-gray-500 text-sm leading-relaxed">Transformando visiones complejas en experiencias digitales excepcionales.</p>
             </div>
@@ -411,7 +376,7 @@
                 </ul>
             </div>
             <div>
-                <h4 class="text-white font-bold-[10px] uppercase tracking-[0.2em] mb-8">Legal</h4>
+                <h4 class="text-white font-black text-[10px] uppercase tracking-[0.2em] mb-8">Legal</h4>
                 <ul class="space-y-4 text-sm text-gray-500 font-medium">
                     <li><a href="#" class="hover:text-gold transition">Privacidad</a></li>
                     <li><a href="#" class="hover:text-gold transition">Términos</a></li>
@@ -419,7 +384,7 @@
             </div>
             <div>
                 <h4 class="text-white font-black text-[10px] uppercase tracking-[0.2em] mb-6">Hablemos</h4>
-                <p class="text-gray-500 text-sm mb-4">Ciudad Real-Madrid España</p>
+                <p class="text-gray-500 text-sm mb-4">Ciudad Real-Madrid, España</p>
                 <a href="mailto:goabad18@outlook.com" class="text-gold font-bold text-sm underline decoration-gold/30 underline-offset-8">goabad18@outlook.com</a>
             </div>
         </div>
