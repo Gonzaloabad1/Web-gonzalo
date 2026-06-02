@@ -36,8 +36,10 @@
 
         .gold-gradient-text {
             background: linear-gradient(to right, #D4AF37, #FBEAA1, #996515);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            /* TODO: add fallback text color for browsers without gradient text support */
         }
 
         .card-hover:hover {
