@@ -271,7 +271,106 @@
             <div class="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-[#050505] to-transparent z-10" aria-hidden="true"></div>
         </div>
     </section>
+<div class="w-full max-w-md mx-auto flex items-center justify-center p-4 bg-transparent">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" class="w-full h-auto drop-shadow-[0_10px_20px_rgba(245,158,11,0.1)]">
+    <defs>
+      <!-- Estilos de las animaciones CSS -->
+      <style>
+        /* Animación del código subiendo por la pantalla */
+        @keyframes scrollCode {
+          0% { transform: translateY(0); opacity: 0; }
+          10% { opacity: 1; }
+          90% { opacity: 1; }
+          100% { transform: translateY(-60px); opacity: 0; }
+        }
+        /* Animación del humo del café */
+        @keyframes floatSteam {
+          0% { transform: translateY(0) scaleX(1); opacity: 0.3; }
+          50% { transform: translateY(-10px) scaleX(1.2); opacity: 0.6; }
+          100% { transform: translateY(-25px) scaleX(0.8); opacity: 0; }
+        }
+        /* Animación del pulso de la bombilla (Ideas) */
+        @keyframes pulseIdea {
+          0%, 100% { opacity: 0.2; filter: drop-shadow(0 0 0px rgba(245,158,11,0)); }
+          50% { opacity: 1; filter: drop-shadow(0 0 12px rgba(245,158,11,0.8)); }
+        }
+        
+        /* Clases aplicadas a los elementos */
+        .anim-code-1 { animation: scrollCode 4s infinite linear; }
+        .anim-code-2 { animation: scrollCode 4s infinite linear; animation-delay: 1.5s; }
+        .anim-code-3 { animation: scrollCode 4s infinite linear; animation-delay: 2.8s; }
+        .anim-steam { animation: floatSteam 3s infinite ease-in-out; }
+        .anim-idea { animation: pulseIdea 3s infinite ease-in-out; }
+      </style>
+    </defs>
 
+    <!-- FONDO DE LA PANTALLA (Monitor principal) -->
+    <rect x="150" y="100" width="500" height="320" rx="15" fill="#111111" stroke="#222222" stroke-width="4" />
+    <rect x="165" y="115" width="470" height="260" rx="5" fill="#1e1e1e" />
+    
+    <!-- Soporte del monitor -->
+    <path d="M360,420 L440,420 L420,470 L380,470 Z" fill="#222222" />
+    <rect x="330" y="470" width="140" height="15" rx="5" fill="#151515" />
+
+    <!-- CÓDIGO ANIMADO EN LA PANTALLA -->
+    <g clip-path="url(#screen-clip)">
+      <clipPath id="screen-clip">
+        <rect x="165" y="115" width="470" height="260" />
+      </clipPath>
+      
+      <!-- Bloque de código 1 -->
+      <g class="anim-code-1" fill="none" stroke-linecap="round" stroke-width="6">
+        <line x1="190" y1="300" x2="240" y2="300" stroke="#f59e0b" />
+        <line x1="255" y1="300" x2="380" y2="300" stroke="#ffffff" opacity="0.8" />
+        <line x1="210" y1="320" x2="320" y2="320" stroke="#3b82f6" />
+        <line x1="210" y1="340" x2="270" y2="340" stroke="#10b981" />
+        <line x1="190" y1="360" x2="230" y2="360" stroke="#f59e0b" />
+      </g>
+      
+      <!-- Bloque de código 2 -->
+      <g class="anim-code-2" fill="none" stroke-linecap="round" stroke-width="6">
+        <line x1="190" y1="330" x2="250" y2="330" stroke="#3b82f6" />
+        <line x1="265" y1="330" x2="340" y2="330" stroke="#ffffff" opacity="0.8" />
+        <line x1="210" y1="355" x2="390" y2="355" stroke="#10b981" />
+        <line x1="190" y1="380" x2="220" y2="380" stroke="#f59e0b" />
+      </g>
+    </g>
+
+    <!-- PORTÁTIL ABIERTO AL LADO (Efecto multidispositivo) -->
+    <path d="M540,320 L640,320 L660,390 L520,390 Z" fill="#1a1a1a" stroke="#2b2b2b" stroke-width="2" />
+    <rect x="550" y="325" width="80" height="55" fill="#111111" />
+    <line x1="560" y1="340" x2="600" y2="340" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" opacity="0.6" />
+    <line x1="560" y1="355" x2="620" y2="355" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity="0.4" />
+    <!-- Base del portátil -->
+    <path d="M510,390 L670,390 L680,400 L500,400 Z" fill="#222222" />
+
+    <!-- TAZA DE CAFÉ HUMEANTE -->
+    <rect x="100" y="440" width="35" height="45" rx="5" fill="#f59e0b" />
+    <path d="M135,450 C145,450 145,465 135,465" fill="none" stroke="#f59e0b" stroke-width="4" />
+    <!-- Humo animado -->
+    <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.5">
+      <path class="anim-steam" d="M110,425 Q105,415 112,405 T110,390" />
+      <path class="anim-steam" d="M122,427 Q127,417 120,407 T124,392" style="animation-delay: 1s;" />
+    </g>
+
+    <!-- BOMBILLA FLOTANTE (Creatividad / Ideas) -->
+    <g class="anim-idea" transform="translate(620, 50)">
+      <!-- Luz amarilla de fondo -->
+      <circle cx="40" cy="40" r="25" fill="#f59e0b" opacity="0.15" />
+      <!-- Silueta bombilla -->
+      <path d="M40,15 C26,15 15,26 15,40 C15,49 22,57 27,62 L27,70 L53,70 L53,62 C58,57 65,49 65,40 C65,26 54,15 40,15 Z" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      <line x1="33" y1="76" x2="47" y2="76" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" />
+      <!-- Filamento brillante -->
+      <path d="M33,45 L38,35 L42,35 L47,45" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <!-- TECLADO Y RATÓN EN EL ESCRITORIO -->
+    <rect x="290" y="500" width="220" height="12" rx="3" fill="#222222" />
+    <rect x="540" y="500" width="20" height="12" rx="6" fill="#222222" />
+    <!-- Línea del escritorio -->
+    <line x1="50" y1="512" x2="750" y2="512" stroke="#222222" stroke-width="4" stroke-linecap="round" />
+  </svg>
+</div>
     <section id="apps" class="py-24 bg-[#030303] border-t border-white/5">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
